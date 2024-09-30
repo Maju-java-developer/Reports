@@ -1,0 +1,35 @@
+.f-ss {
+    font-family: sans-serif;
+}
+
+.fs {
+    font-size: 10px;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+.container {
+}
+
+img {
+    height: 40%;
+    width: 40%;
+    float: left; /* Floats the image to the left */
+}
+
+.text-block {
+    font-family: sans-serif;
+    float: right;
+    font-size: 8px;
+    width: 150px;
+}
+
+.tar {
+    text-align: right;
+}
+
+.tac {
+    text-align: center;
+}
