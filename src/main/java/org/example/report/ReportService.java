@@ -9,7 +9,7 @@ public class ReportService {
         ReportGenerator reportGenerator = switch (reportType) {
             case "DailyCashBook" -> new DailyCashReport(data);
             case "TCLReport" -> new TCLReport();
-            case "SummaryReport" -> new SummaryReport();
+            case "SummaryReport" -> new VerificationSummaryReport();
             // Add other report types here
             default -> throw new IllegalArgumentException("Unknown report type");
         };

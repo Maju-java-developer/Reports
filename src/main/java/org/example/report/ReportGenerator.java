@@ -7,6 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * Interface for generating reports in PDF format.
@@ -51,26 +52,23 @@ public interface ReportGenerator {
      * @return the HTML string representing the footer content.
      */
     default String getFooterContent() {
-        return """
-                    <pre style="font-family: sans-serif;">
-                    This daily cash summary is processed
-                    and printed by Computer Section of
-                    M.R Wing Karachi on the basis of
-                    daily transactions through counters
-                    </pre>
-                    <table style="font-family: sans-serif; width: 100%; text-align: center;">
-                        <tr style="height: 40px;">
-                            <td>_______________________________</td>
-                            <td>_______________________________</td>
-                            <td>_______________________________</td>
-                        </tr>
-                        <tr>
-                            <td>Deputy Director (Computer)</td>
-                            <td>Head Cashier</td>
-                            <td>Deputy Director (ADMIN)</td>
-                        </tr>
-                    </table>
-                """;
+        return "";
+    }
+
+    /**
+     * Returns custom CSS styles to be applied to the elements of the component and use the class-name.
+     * This method allows you to define your own CSS styles as a string, which will
+     * be applied to the component when rendered. To effectively customize the
+     * appearance, you can use various CSS rules and selectors.
+     * use case
+     * .box {
+     *     backgroundColor: green;
+     * } use class name on element to apply class on element where you want to apply it will apply directly when pdf render
+     * @author Majid.Hussain
+     * @since 01-10-2024
+     * */
+    default String getCustomStyleCss() {
+        return "";
     }
 
     /**
@@ -141,10 +139,12 @@ public interface ReportGenerator {
      * @since 27-09-2024
      */
     default String generateHTMLToPDFContent() {
-        StringBuilder html = new StringBuilder();
-        html.append("<html lang=\"en\">")
+        return new StringBuilder().append("<html lang=\"en\">")
                 .append("<head>").append("<title>").append(getReportTitle()).append("</title>")
+                .append("<style type=\"text/css\">")
                 .append(ReportUtils.getStyle())
+                .append(Objects.requireNonNullElse(getCustomStyleCss(), ""))
+                .append("</style>")
                 .append("</head>")
                 .append("<body class=\"f-ss fs\">")
                 .append(getHeaderContent())
@@ -152,8 +152,7 @@ public interface ReportGenerator {
                 .append(generateHTMLBodyContent())
                 .append("<div>").append(getFooterContent()).append("</div>")
                 .append("</body>")
-                .append("</html>");
-        return html.toString();
+                .append("</html>").toString();
     }
 
     /**
@@ -166,7 +165,7 @@ public interface ReportGenerator {
     default String generateHTMLBodyContent() {
         StringBuilder html = new StringBuilder();
 
-        html.append("<table style=\"width: auto; margin: auto; border-collapse: collapse;\" class=\"f-ss\">")
+        html.append("<table style=\"width: 100%; border-collapse: collapse;\" class=\"f-ss\">")
                 .append("<thead>")
                 .append(headerHTMLContent())
                 .append("</thead>")

@@ -41,7 +41,7 @@ public class ReportUtils {
      * directory within the resources. If found, it reads the CSS
      * content and wraps it in a style tag for use in HTML documents.
      *
-     * @return A string containing the CSS wrapped in a <style> tag.
+     * @return A string containing the CSS without wrapped in a <style> tag.
      * @throws RuntimeException if the style file is not found.
      * @author Majid.Hussain
      * @since 26-09-2024
@@ -54,11 +54,46 @@ public class ReportUtils {
                 throw new RuntimeException("Style file not found");
             }
             // Read the content of the CSS file
-            String styleClasses = new String(inputStream.readAllBytes());
-            return "<style type=\"text/css\">" + styleClasses + "</style>";
+            return new String(inputStream.readAllBytes());
+//            String styleClasses = new String(inputStream.readAllBytes());
+//            return "<style type=\"text/css\">" + styleClasses + "</style>";
         } catch (IOException e) {
             e.printStackTrace();
             return "";
         }
+    }
+
+    /**
+     * Generates the footer content for a daily cash summary report.
+     *
+     * <p>This method returns a formatted HTML string containing a summary message
+     * and a table for signatures. The summary is printed in a <code>&lt;pre&gt;</code>
+     * tag for preformatted text, ensuring that whitespace is preserved. The
+     * signature table contains three positions: Deputy Director (Computer),
+     * Head Cashier, and Deputy Director (ADMIN).</p>
+     *
+     * @return A string containing the HTML markup for the footer content.
+     */
+    public static String getFooterContent() {
+        return """
+                    <pre style="font-family: sans-serif;">
+                    This daily cash summary is processed
+                    and printed by Computer Section of
+                    M.R Wing Karachi on the basis of
+                    daily transactions through counters
+                    </pre>
+                    <table style="font-family: sans-serif; width: 100%; text-align: center;">
+                        <tr style="height: 40px;">
+                            <td>_______________________________</td>
+                            <td>_______________________________</td>
+                            <td>_______________________________</td>
+                        </tr>
+                        <tr>
+                            <td>Deputy Director (Computer)</td>
+                            <td>Head Cashier</td>
+                            <td>Deputy Director (ADMIN)</td>
+                        </tr>
+                    </table>
+                """;
     }
 }

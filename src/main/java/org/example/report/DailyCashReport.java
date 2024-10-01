@@ -1,13 +1,14 @@
 package org.example.report;
 
 import org.example.enums.ReportColumns;
+import org.example.util.ReportUtils;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DailyCashReport implements ReportGenerator{
+public class DailyCashReport implements ReportGenerator {
     Map<String, Object> sideBarData;
 
     public DailyCashReport(Map<String, Object> sideBarData) {
@@ -53,5 +54,15 @@ public class DailyCashReport implements ReportGenerator{
             put("Contact Number", "03348909674");
         }});
         return dataList;
+    }
+
+    /**
+     * Provides the footer content for the report.
+     *
+     * @return the HTML string representing the footer content.
+     */
+    @Override
+    public String getFooterContent() {
+        return ReportUtils.getFooterContent();
     }
 }

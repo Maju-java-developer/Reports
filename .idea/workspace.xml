@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fe5abcb-5e52-4cf8-8dfb-f77306ee29e3" name="Changes" comment="Working with Reports create dynamically generating report">
+    <list default="true" id="439162fc-1094-4630-90d6-05d41d1bb834" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/enums/ReportColumns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/ReportColumns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/DailyCashReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/DailyCashReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/ReportGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/SummaryReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/VerificationSummaryReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/ReportUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ReportUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,38 +26,53 @@
       <list>
         <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2mb3xDUCFf1ViFT05EWijqOYhPI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/SpringBootProjects/Reports/src/main/resources/static",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/SpringBootProjects/Reports/src/main/resources/static&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\SpringBootProjects\Reports\src\main\resources\static" />
@@ -80,7 +104,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7fe5abcb-5e52-4cf8-8dfb-f77306ee29e3" name="Changes" comment="" />
+      <changelist id="439162fc-1094-4630-90d6-05d41d1bb834" name="Changes" comment="" />
       <created>1727331695735</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -91,6 +115,7 @@
       <workItem from="1727433126392" duration="134000" />
       <workItem from="1727442250109" duration="296000" />
       <workItem from="1727673148846" duration="8085000" />
+      <workItem from="1727763139781" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="Working with Reports create dynamically generating report">
       <created>1727681848342</created>
@@ -139,8 +164,8 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/report/SummaryReport.java</url>
-          <line>35</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/report/VerificationSummaryReport.java</url>
+          <line>37</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
