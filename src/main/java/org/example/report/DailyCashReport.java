@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 
 public class DailyCashReport implements ReportGenerator {
+    private ReportParameters reportParameters;
+
     Map<String, Object> sideBarData;
 
     public DailyCashReport(Map<String, Object> sideBarData) {

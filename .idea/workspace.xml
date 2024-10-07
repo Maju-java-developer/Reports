@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="439162fc-1094-4630-90d6-05d41d1bb834" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="439162fc-1094-4630-90d6-05d41d1bb834" name="Changes" comment="added default customStyleCss and some changes in report">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/report/ReportParameters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/enums/ReportColumns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/ReportColumns.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/DailyCashReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/DailyCashReport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/ReportGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/SummaryReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/VerificationSummaryReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/ReportUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ReportUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/report/TCLReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/report/TCLReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,7 +56,6 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/SpringBootProjects/Reports/src/main/resources/static&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -115,7 +110,10 @@
       <workItem from="1727433126392" duration="134000" />
       <workItem from="1727442250109" duration="296000" />
       <workItem from="1727673148846" duration="8085000" />
-      <workItem from="1727763139781" duration="1700000" />
+      <workItem from="1727763139781" duration="4303000" />
+      <workItem from="1727778705991" duration="1484000" />
+      <workItem from="1728039711320" duration="4660000" />
+      <workItem from="1728275906879" duration="2302000" />
     </task>
     <task id="LOCAL-00001" summary="Working with Reports create dynamically generating report">
       <created>1727681848342</created>
@@ -124,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727681848342</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added default customStyleCss and some changes in report">
+      <created>1727764962210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727764962211</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +148,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working with Reports create dynamically generating report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working with Reports create dynamically generating report" />
+    <MESSAGE value="added default customStyleCss and some changes in report" />
+    <option name="LAST_COMMIT_MESSAGE" value="added default customStyleCss and some changes in report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -160,7 +166,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/report/TCLReport.java</url>
-          <line>26</line>
+          <line>28</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

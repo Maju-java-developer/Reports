@@ -1,5 +1,7 @@
 package org.example.report;
 
+import org.example.util.ReportUtils;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -478,4 +480,13 @@ public class TCLReport implements ReportGenerator{
         return dataList;
     }
 
+    /**
+     * Provides the footer content for the report.
+     *
+     * @return the HTML string representing the footer content.
+     */
+    @Override
+    public String getFooterContent() {
+        return ReportUtils.getFooterContent();
+    }
 }

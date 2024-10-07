@@ -150,7 +150,15 @@ public interface ReportGenerator {
                 .append(getHeaderContent())
                 .append("<div style=\"margin-bottom: 100px;\"></div>")
                 .append(generateHTMLBodyContent())
+
+                .append("<div style=\"clear: both;\"></div>") // Ensure floats are cleared
+                .append("<div style=\"position: relative; margin-top: 20px;\">") // Add some space above the footer
                 .append("<div>").append(getFooterContent()).append("</div>")
+                .append("</div>")
+
+//                .append("<div style=\"margin: 100px;\"></div>")
+//                .append("<div>").append(getFooterContent()).append("</div>")
+
                 .append("</body>")
                 .append("</html>").toString();
     }
@@ -169,8 +177,7 @@ public interface ReportGenerator {
                 .append("<thead>")
                 .append(headerHTMLContent())
                 .append("</thead>")
-                .append("<tbody>");
-
+                .append("<tbody style=\"margin-bottom: 20px\">");
         if (tableData() != null) {
             for (Map<String, Object> record : tableData()) {
                 html.append("<tr>");

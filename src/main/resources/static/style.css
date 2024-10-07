@@ -33,3 +33,12 @@ img {
 .tac {
     text-align: center;
 }
+
+table {
+    page-break-inside: auto;
+}
+
+tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
